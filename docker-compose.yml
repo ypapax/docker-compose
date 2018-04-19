@@ -1,0 +1,12 @@
+# the third version of docker compose yaml syntax
+version: '3'
+services:
+  product-service:
+    # relative directory to docker compose file:
+    build: ./product
+    volumes:
+      - ./product:/usr/src/app
+    ports:
+      # port 80 because api.py is going to listen at 80
+      # 5001 - we chose it
+      - 5001:80

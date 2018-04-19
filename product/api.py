@@ -3,7 +3,7 @@
 from flask import Flask
 from flask_restful import Resource, Api
 
-app = Flas(__name__)
+app = Flask(__name__)
 api = Api(app)
 
 class Product(Resource):
