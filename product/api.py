@@ -9,9 +9,10 @@ api = Api(app)
 class Product(Resource):
     def get(self):
         return {
-            'product': ['Ice cream',
+            'products': ['Ice cream',
                         'Meat',
-                        'Onion']
+                        'Onion',
+                        'Garlic']
         }
 
 api.add_resource(Product, '/')

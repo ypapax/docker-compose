@@ -10,3 +10,12 @@ services:
       # port 80 because api.py is going to listen at 80
       # 5001 - we chose it
       - 5001:80
+
+  website:
+    image: php:apache
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - 5000:80
+    depends_on:
+      - product-service
